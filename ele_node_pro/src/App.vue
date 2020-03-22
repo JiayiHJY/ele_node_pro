@@ -1,11 +1,22 @@
 <template>
   <el-container style="height: 100vh; border: 1px solid #eee">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu router :default-openeds="['1']">
+      <el-menu router :default-openeds="['1', '2', '3']">
         <el-submenu index="1">
-          <template slot="title"><i class="el-icon-tickets"></i>内容管理</template>
-          <el-menu-item index="/articles/index">文章列表</el-menu-item>
-          <el-menu-item index="/articles/config">新建文章</el-menu-item>
+          <template slot="title"><i class="el-icon-tickets"></i>资料管理</template>
+          <el-menu-item index="/students/index">学员信息</el-menu-item>
+          <el-menu-item index="/students/config">新建学员</el-menu-item>
+        </el-submenu>
+        <el-submenu index="2">
+          <template slot="title"><i class="el-icon-tickets"></i>课堂管理</template>
+          <el-menu-item index="/class/index">课表信息</el-menu-item>
+          <el-menu-item index="/class/config">编辑课表</el-menu-item>
+          <el-menu-item index="/class/leave">请假审批</el-menu-item>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title"><i class="el-icon-tickets"></i>订单管理</template>
+          <el-menu-item index="/order/index">课程订单</el-menu-item>
+          <el-menu-item index="/order/config">订单处理</el-menu-item>
         </el-submenu>
       </el-menu>
     </el-aside>

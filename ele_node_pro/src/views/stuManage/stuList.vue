@@ -1,9 +1,11 @@
 <template>
     <div>
         <el-table :data="articles">
-            <el-table-column prop="title" label="标题" width="140">
+            <el-table-column prop="CHName" label="中文名" width="140">
             </el-table-column>
-            <el-table-column prop="body" label="内容" width="500">
+            <el-table-column prop="ENName" label="英文名" width="140">
+            </el-table-column>
+            <el-table-column prop="level" label="等级" width="140">
             </el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">

@@ -12,8 +12,9 @@ mongoose.connect('mongodb://localhost:27017/ele_node', {
 })
 
 const Article = mongoose.model('Article', new mongoose.Schema({
-    title: { type: String },
-    body: { type: String }
+    CHName: { type: String },
+    ENName: { type: String },
+    level: { type: String }
 }))
 
 app.get('/', async (req, res) => {
