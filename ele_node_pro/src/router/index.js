@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import listArticle from '../views/listArticle'
-import createArticle from '../views/createArticle'
+import configArticle from '../views/configArticle'
 
 Vue.use(VueRouter)
 
@@ -17,9 +17,15 @@ const routes = [
     component: listArticle
   },
   {
-    path: '/articles/create',
-    name: 'createArticle',
-    component: createArticle
+    path: '/articles/config',
+    name: 'configArticle',
+    component: configArticle
+  },
+  {
+    path: '/articles/config/:id',
+    name: 'configArticle',
+    component: configArticle,
+    props: true
   }
 ]
 

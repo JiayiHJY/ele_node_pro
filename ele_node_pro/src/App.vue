@@ -5,7 +5,7 @@
         <el-submenu index="1">
           <template slot="title"><i class="el-icon-tickets"></i>内容管理</template>
           <el-menu-item index="/articles/index">文章列表</el-menu-item>
-          <el-menu-item index="/articles/create">新建文章</el-menu-item>
+          <el-menu-item index="/articles/config">新建文章</el-menu-item>
         </el-submenu>
       </el-menu>
     </el-aside>
