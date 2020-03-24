@@ -1,11 +1,11 @@
 <template>
     <div>
-        <el-table :data="students">
-            <el-table-column prop="CHName" label="中文名" width="140">
+        <el-table :data="users">
+            <el-table-column prop="_id" label="ID" width="250">
             </el-table-column>
-            <el-table-column prop="ENName" label="英文名" width="140">
+            <el-table-column prop="username" label="用户" width="140">
             </el-table-column>
-            <el-table-column prop="level" label="等级" width="140">
+            <el-table-column prop="password" label="密码" width="140">
             </el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">
@@ -21,23 +21,23 @@
     export default {
         data() {
             return {
-                students: []
+                users: []
             }
         },
         methods: {
             // 查询列表数据
             queryData () {
-                this.$http.get('/students').then(res => {
-                    this.students = res.data
+                this.$http.get('/users').then(res => {
+                    this.users = res.data
                 })
             },
             // 编辑
             edit (_id) {
-                this.$router.push(`/students/config/${_id}`)
+                this.$router.push(`/users/config/${_id}`)
             },
             // 删除
             remove (id) {
-                this.$http.delete(`/students/${id}`).then(res => {
+                this.$http.delete(`users/${id}`).then(res => {
                     console.log(res.data)
                     this.$message({
                         message: '删除成功',
